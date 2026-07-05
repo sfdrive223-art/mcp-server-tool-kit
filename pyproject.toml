@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dynamic-tool-mcp"
+version = "0.1.0"
+description = "Tools Framework — FastMCP server with dynamic .py+.yaml tool loading and bearer auth"
+requires-python = ">=3.12"
+dependencies = [
+    "fastmcp>=2.0",
+    "PyYAML>=6.0",
+]
+
+[project.scripts]
+dynamic-tool-mcp = "dynamic_tool_mcp.cli:main"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.25",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["dynamic_tool_mcp*"]

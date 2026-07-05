@@ -1,0 +1,12 @@
+id: add_numbers
+description: Add two numbers and return the sum.
+input_schema:
+  type: object
+  properties:
+    a:
+      type: number
+    b:
+      type: number
+  required:
+    - a
+    - b

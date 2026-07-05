@@ -5,6 +5,10 @@ Minimal stand-in for the **Tools Framework** (package `dynamic-tool-mcp`) expect
 tools from `.py`+`.yaml` pairs, plus a client satisfying AAF's `McpRuntimeAdapter`
 contract (`get_session(server_url, bearer_token) -> session.call_tool(id, input)`).
 
+Pairs with [agent-impl-tool-kit](../agent-impl-tool-kit), the sibling stand-in for
+AAF's **Agent Framework** (`agentic-platform`) — together the two satisfy AAF's
+`AgenticPlatformAdapter` and `McpRuntimeAdapter` contracts for local dev.
+
 ## Run it
 
 ```bash
